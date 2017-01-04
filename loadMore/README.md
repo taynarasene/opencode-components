@@ -43,11 +43,12 @@ Faça a chamada abaixo, nas paginas de busca e categorias para exibir o botão.
 ```sh
   {% element 'snippets/loadmore' %}
 ```
-#### Opição de parametros
+#### Opções de parametros
 
 | Opções        | Descrição     |
 | ------------- |:-------------:|
 | productsGrid  | Deve receber a classe que da showcase da listagem de produtos; |
 | pagenationContainer | Deve receber a classe da paginação padrão;     |
-| totalPages | Deve receber o total de paginas da categoria/busca atual **(Twig {{ paginate.params.pageCount }})| | itemsPerRow | Recebe a quantidade maxima de Itens por Linha; |
+| totalPages | Receber o total de paginas da categoria/busca atual (Twig {{ paginate.params.pageCount }})|
+| itemsPerRow | Recebe a quantidade maxima de Itens por Linha; |
 | buttonLoadMore| Deve receber a classe contina do botão "LoadMore" na pagina de categoria/busca;|
