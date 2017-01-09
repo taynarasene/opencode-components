@@ -3,11 +3,7 @@ Componente de paginação para lojas que utilizam o Opencode
 
 ## Como utilizar
 
-Clone o projeto para seu tema Opencode
-
-```sh
-$ git clone https://github.com/TaahSene/loadMore.git
-```
+Adicione o arquivo [loadMore.js](https://github.com/TaahSene/opencode-components/blob/master/loadMore/js/module/loadMore.js) a sua pasta `js/modlules`
 
 Crie um arquivo no diretorio `elements/snippets` como `loadmore.html` por exemplo e nele faça a chamada do botão nas paginas de categoria e busca, como abaixo:
 
