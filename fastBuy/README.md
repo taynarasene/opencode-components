@@ -8,7 +8,7 @@ Crie um arquivo no diretorio `elements/snippets` como `qtd_home.html` e adicione
 ```html
 <div data-app="product.quantity">
   <button type="button" data-app="product.qty" data-action="minus" data-product ="{{ product.id }}">
-     Remover
+    Remover
   </button>
   <input type="text" class="form-control" name="qty" id="qtd{{ product.id }}" value="1">
   <button data-app="product.qty" type="button" data-action="plus" data-product ="{{ product.id }}" >
@@ -20,7 +20,9 @@ Crie um arquivo no diretorio `elements/snippets` como `qtd_home.html` e adicione
 Adicione ao snippet de produtos, o código para o botão comprar:
 
 ```html
-<button type="submit" class="comprar" data-app="product.buy-button" data-product ="{{ product.id }}" >  </button>
+<button type="submit" data-app="product.buy-button" data-product ="{{ product.id }}" >
+  Comprar
+</button>
 
 ```
 
