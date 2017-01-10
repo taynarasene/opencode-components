@@ -12,6 +12,7 @@
  * content = seletor que receberá a montagem das variações;
  *
  */
+
  jQuery.fn.variants = function (options) {
 
    // Variaveis
