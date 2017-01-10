@@ -19,3 +19,7 @@ Componentes OpenCode da plataforma de e-commerce Tray
 ### [imagesHover](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md)
 
 - Esse componente exibe uma listagem com as imagem do produto, ao sobrepor uma dessas imagem com o mouse, ela se torna a imagem em destaque na listagem, clique [aqui](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md) para mais detalhes.
+
+### [variants](https://github.com/TaahSene/opencode-components/blob/master/variants/README.md)
+
+- Esse componente exibe as variações do produto, além de possibilitar a seleção e inclusão do produto ao carrinho , clique [aqui](https://github.com/TaahSene/opencode-components/blob/master/variants/README.md) para mais detalhes.
