@@ -18,4 +18,4 @@ Componentes OpenCode da plataforma de e-commerce Tray
 
 ### [imagesHover](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md)
 
-- Esse componente exibe uma listagem com as imagem do produto, ao sobrepor uma dessas imagem com o mouse, ela se torna a imagem em destaque na listagem, clique [aqui]https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md) para mais detalhes.
+- Esse componente exibe uma listagem com as imagem do produto, ao sobrepor uma dessas imagem com o mouse, ela se torna a imagem em destaque na listagem, clique [aqui](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md) para mais detalhes.
