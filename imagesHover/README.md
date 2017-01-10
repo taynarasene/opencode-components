@@ -13,13 +13,13 @@ Adicione ao arquivo `default.html` a chamada do script:
 <script type="text/javascript" src="{{ asset('js/modules/imagesHover.js') }}"></script>
 ```
 
-Faça a chamada abaixo, no snippet de produto, onde deseja exibir o campo de quantidade.
+Faça a chamada abaixo, no snippet de produto, onde deseja exibir a listagem.
 
 ```sh
 {% element 'snippets/imagesHover' {"product": product } %}
 ```
 
-Adicione a imagem principal do produto o data-attribute `data-image={{ product.id }}`, por exemplo:
+Adicione á imagem principal do produto o data-attribute `data-image={{ product.id }}`, por exemplo:
 
 ```html
 <img src="{{ product.images[0].large }}" data-image="{{ product.id }}" alt="{{ product.name }}">
