@@ -1,0 +1,49 @@
+<!--
+  * author: Taynara Sene
+  * github: taahsene
+
+  * Listagem de Imagem - para loja Tray Commerce- Opencode
+
+  * **Utilização**
+  *
+  * Faça a chamada do snippet de quantidade no snippet de Produtos
+  * {% element 'snippets/imagesHover'{"product": product}  %}
+  *
+  * Ele deverá exibir todas as imagem do produto, ao sobrepor o mouse nessas imagem,
+  * ela será exibida como imagem principal. 
+  * -->
+
+<div class="col-md-12">
+  {% set item = [] %}
+  <ul class="list-thumb">
+    {% if product.images %}
+    <li>
+      <div class="img">
+          <img class="img-responsive" src="{{ product.images[0].small }}" full="{{ product.images[0].full }}" alt="{{ product.name }}" data-product="{{ product.id }}"/>
+      </div>
+    </li>
+    {% endif %}
+    {% for variant in product.variants|slice(0,6) %}
+      {% if loop.index <= 6 %}
+        {% if variant.VariantImage %}
+          {% for variantImage in variant.VariantImage %}
+            <li>
+              <div class="img">
+                <img class="img-responsive" src="{{ variantImage.thumbs[90].http }}" full="{{ variantImage.thumbs[180].http }}" alt="{{ product.name }}" data-product="{{ product.id }}"/>
+              </div>
+            </li>
+          {% endfor %}
+        {% else %}
+          {% if variant.Sku[0].value not in item %}
+            <li>
+              <div class="img">
+                  <img class="img-responsive" src="{{ variant.images[0].small }}" full="{{ variant.images[0].full }}" alt="{{ product.name }}" data-product="{{ product.id }}"/>
+              </div>
+            </li>
+            {% set item = item|merge([ variant.Sku[0].value ]) %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
