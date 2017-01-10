@@ -23,3 +23,5 @@ Componentes OpenCode da plataforma de e-commerce Tray
 ### [variants](https://github.com/TaahSene/opencode-components/blob/master/variants/README.md)
 
 - Esse componente exibe as variações do produto, além de possibilitar a seleção e inclusão do produto ao carrinho , clique [aqui](https://github.com/TaahSene/opencode-components/blob/master/variants/README.md) para mais detalhes.
+
+Contribuições e novos componentes são Bem Vindos!
