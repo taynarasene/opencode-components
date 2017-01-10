@@ -1,6 +1,6 @@
 # imagesHover
 
-Exibe uma listagem com todos as imagem do produto, ao sobrepor o mouse nessas imagem, ela se torna a imagem pricipal do produto.
+Exibe uma listagem com todos as imagem do produto, ao sobrepor o mouse nessas imagem, ela se torna a imagem principal do produto.
 
 Adicione o arquivo [imagesHover.js](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/js/modules/imagesHover.js) a sua pasta `js/modules`
 
