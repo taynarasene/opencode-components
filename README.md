@@ -15,3 +15,7 @@ Componentes OpenCode da plataforma de e-commerce Tray
 ### [cartDetails](https://github.com/TaahSene/opencode-components/blob/master/cartDetails/README.md)
 
 - Esse componente exibe detalhes dos produtos adicionados ao carrinho, alem de possibilitar a exclusão dos produtos e de suas variações, clique [aqui](https://github.com/TaahSene/opencode-components/blob/master/cartDetails/README.md) para mais detalhes.
+
+### [imagesHover](https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md)
+
+- Esse componente exibe uma listagem com as imagem do produto, ao sobrepor uma dessas imagem com o mouse, ela se torna a imagem em destaque na listagem, clique [aqui]https://github.com/TaahSene/opencode-components/blob/master/imagesHover/README.md) para mais detalhes.
