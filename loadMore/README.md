@@ -3,19 +3,17 @@ Componente de paginação para lojas que utilizam o Opencode
 
 ## Como utilizar
 
-Adicione o arquivo [loadMore.js](https://github.com/TaahSene/opencode-components/blob/master/loadMore/js/module/loadMore.js) a sua pasta `js/modlules`
+Adicione o arquivo [loadMore.js](https://github.com/TaahSene/opencode-components/blob/master/loadMore/js/modules/loadMore.js) a sua pasta `js/modlules` e o arquivo [loadmore.css](https://github.com/TaahSene/opencode-components/blob/master/loadMore/css/loadmore.css) a pasta `css`.
 
-Crie um arquivo no diretorio `elements/snippets` como `loadmore.html` por exemplo e nele faça a chamada do botão nas paginas de categoria e busca, como abaixo:
+Crie um arquivo no diretorio `elements/snippets` como [loadmore.html](https://github.com/TaahSene/opencode-components/blob/master/loadMore/elements/snippets/loadmore.html) por exemplo e nele faça a chamada do botão nas paginas de categoria e busca, como abaixo:
 
 ```html
-<button class="button load-more col-md-12" id="load-more">
-    <span class="load">Carregar mais produtos </span>
-    <span class="reload"><img src="{{ asset('img/reload.gif') }}" alt="" height="30px" /></span>
-</button>
+{% element 'snippets/loadmore' %}
 ```
-Adicione ao arquivo `default.html` a chamada do script:
+Adicione ao arquivo `default.html` a chamada dos css e do javascript:
 
 ```javascript
+<link rel="stylesheet" href="{{ asset('css/loadmore.css') }}" type="text/css">
 <script type="text/javascript" src="{{ asset('js/modules/loadMore.js') }}"></script>
 ```
 Adicione ao final desse mesmo arquivo (defalt.html) a chamada abaixo, passando os parametros que deseja:
