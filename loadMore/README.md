@@ -1,6 +1,8 @@
 # loadMore
 Componente de paginação para lojas que utilizam o Opencode
 
+![example](https://github.com/TaahSene/opencode-components/blob/master/loadMore/example.gif)
+
 ## Como utilizar
 
 Adicione o arquivo [loadMore.js](https://github.com/TaahSene/opencode-components/blob/master/loadMore/js/modules/loadMore.js) a sua pasta `js/modlules` e o arquivo [loadmore.css](https://github.com/TaahSene/opencode-components/blob/master/loadMore/css/loadmore.css) a pasta `css`.
