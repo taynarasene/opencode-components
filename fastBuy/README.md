@@ -1,7 +1,7 @@
 # fastBuy
 Compra Rapida (Home)
 
-Adicione o arquivo [fastBuy.js](https://github.com/TaahSene/opencode-components/blob/master/fastBuy/js/molules/fastBuy.js) a sua pasta `js/modules`, o arquivo [fastBuy.html]((https://github.com/TaahSene/opencode-components/blob/master/fastBuy/elements/snippets/fastBuy.html) na pasta `elements/snippets`, e o arquivo [fastBuy.css]((https://github.com/TaahSene/opencode-components/blob/master/fastBuy/css/fastBuy.css) na pasta `css`.
+Adicione o arquivo [fastBuy.js](https://github.com/TaahSene/opencode-components/blob/master/fastBuy/js/molules/fastBuy.js) a sua pasta `js/modules`, o arquivo [fastBuy.html](https://github.com/TaahSene/opencode-components/blob/master/fastBuy/elements/snippets/fastBuy.html) na pasta `elements/snippets`, e o arquivo [fastBuy.css](https://github.com/TaahSene/opencode-components/blob/master/fastBuy/css/fastBuy.css) na pasta `css`.
 
 Adicione ao arquivo `default.html` a chamada do script:
 
