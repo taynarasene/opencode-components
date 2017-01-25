@@ -1,0 +1,36 @@
+[data-app="product.qty"]{
+  border: none;
+  background: transparent;
+  font-size: x-large;
+}
+[data-app="product.qty"]:hover{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+}
+[data-action="minus"]{
+  letter-spacing:-1px;
+}
+[data-action="minus"]:hover{
+  color:red;
+}
+[data-action="plus"]:hover{
+  color:green;
+}
+[name="qty"]{
+  text-align: center;
+}
+
+[data-app="product.buy-button"]{
+  background: #6ABF57;
+  width: 100%;
+  height: 27px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 3px solid #539E41;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 0;
+}

@@ -28,7 +28,8 @@
   jQuery('[data-app="product.buy-button"]').on('click', function() {
     var $productId = jQuery(this).attr('data-product');
     var $dataSession = jQuery("html").attr("data-session");
-    var $productQtd = parseInt(document.getElementById("quant"+ $productId).value);
+    var $productQtd = parseInt(jQuery('#qtd'+$productId).attr('value'));
+    var self = this;
 
     jQuery.ajax({
       method: "POST",
@@ -36,6 +37,7 @@
       contentType: "application/json; charset=utf-8",
       data: '{"Cart":{"session_id":"'+$dataSession+'","product_id":"'+$productId+'","quantity":'+$productQtd+'}}'
     }).done(function( response, textStatus, jqXHR ) {
+      jQuery(self).text("Adicionado!")
       alert("Produto Adicionado ao Carrinho!");
 
       //Função para exibir a modal

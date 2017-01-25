@@ -1,0 +1,12 @@
+<div class="row">
+  <div data-app="product.quantity" class="col-md-6">
+    <button type="button" data-app="product.qty" data-action="minus" data-product ="{{ product.id }}">--</button>
+    <input type="text" class="form-control" name="qty" id="qtd{{ product.id }}" value="1" size="2">
+    <button data-app="product.qty" type="button" data-action="plus" data-product ="{{ product.id }}" >+</button>
+  </div>
+  <div class="col-md-6">
+    <button type="submit" data-app="product.buy-button" data-product ="{{ product.id }}" >
+      Comprar
+    </button>
+  </div>
+</div>
