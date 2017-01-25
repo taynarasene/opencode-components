@@ -38,7 +38,6 @@
       data: '{"Cart":{"session_id":"'+$dataSession+'","product_id":"'+$productId+'","quantity":'+$productQtd+'}}'
     }).done(function( response, textStatus, jqXHR ) {
       jQuery(self).text("Adicionado!")
-      alert("Produto Adicionado ao Carrinho!");
 
       //Função para exibir a modal
       reloaderPreview(showModal);
