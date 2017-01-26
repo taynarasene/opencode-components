@@ -15,22 +15,22 @@
 
   // Quantidade
   jQuery('[data-app="product.qty"]').on('click', function() {
-    var $productId = jQuery(this).attr('data-product');
-    var value = parseInt(jQuery('#qtd'+$productId).attr('value'));
+    var $input = jQuery(this).parent().find('input')[0];
+    var value = parseInt(jQuery($input).attr('value'));
     var option = jQuery(this).attr('data-action')== 'minus' ? -1 : 1
 
     value += option;
     if(value > 0)
-      jQuery('#qtd'+$productId).attr('value',value);
+      jQuery($input).attr('value',value);
   })
 
   //Comprar
   jQuery('[data-app="product.buy-button"]').on('click', function() {
+    var $input = jQuery(this).parent().parent().find('input')[0];
     var $productId = jQuery(this).attr('data-product');
     var $dataSession = jQuery("html").attr("data-session");
-    var $productQtd = parseInt(jQuery('#qtd'+$productId).attr('value'));
+    var $productQtd = parseInt(jQuery($input).attr('value'));
     var self = this;
-
     jQuery.ajax({
       method: "POST",
       url: "/web_api/cart/",
@@ -38,6 +38,7 @@
       data: '{"Cart":{"session_id":"'+$dataSession+'","product_id":"'+$productId+'","quantity":'+$productQtd+'}}'
     }).done(function( response, textStatus, jqXHR ) {
       jQuery(self).text("Adicionado!")
+      // alert("Produto Adicionado ao Carrinho!");
 
       //Função para exibir a modal
       reloaderPreview(showModal);
