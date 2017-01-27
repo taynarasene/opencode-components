@@ -1,6 +1,13 @@
 # cartDetails
 Detalhes do Carrinho
 
+![example](https://github.com/TaahSene/opencode-components/blob/master/cartDetails/example.gif)
+
+
+####Observações
+
+** Imagem apenas ilustrativa, esse componente trata apenas da exibição das informações dos produtos contidos no carrinho, todo a parte de exibição do componente em si deve ser desenvolvida, tais como efeitos e estilização.
+
 Adicione o arquivo [cartDetails.js](https://github.com/TaahSene/opencode-components/blob/master/cartDetails/js/modules/cartDetails.js) a sua pasta `js/modules`
 
 Adicione ao arquivo `default.html` a chamada do script:
