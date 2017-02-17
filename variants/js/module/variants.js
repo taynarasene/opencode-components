@@ -29,8 +29,6 @@
      init: function(){
 
          methods.requestVariants(params);
-         jQuery(content).append("<input type='hidden' name='variacao' id='selectedVariant"+options.productId+"' value=''>");
-         jQuery(content).prepend('<span class="var-unavailable'+options.productId+' blocoAlerta" style="display:none">Indisponivel</span>');
 
          jQuery( document ).ready(function() {
           jQuery('#opcoes0 li').click(function(){
@@ -50,6 +48,7 @@
             }
           });
         });
+
      },
 
      requestVariants: function (reqParams){
@@ -64,6 +63,7 @@
          }
 
          if(parseInt(response.paging.total) > parseInt(response.paging.page) * parseInt(response.paging.limit)){
+
            params["product_id"] = options.product_id;
            params["page"] = parseInt(response.paging.page) + 1;
            methods.requestVariants(params);
@@ -80,11 +80,12 @@
         //Função de validação de disponibilizade do produto
        if(available != 0){
          for (j = 0; j < variant.Sku.length; j++) {
-             if (i == 1 && parseInt(response.paging.page) == 1) {
-               skuVariants[variant.Sku[j].type] = [];
-               skuVariantsData[variant.Sku[j].type] = [];
-             }
-           if(jQuery.inArray(variant.Sku[j].value, skuVariants[variant.Sku[j].type]) < 0){
+           if (parseInt(response.paging.page) == 1
+              && typeof variant.VariantImage[j] == "undefined") {
+             skuVariants[variant.Sku[j].type] = [];
+             skuVariantsData[variant.Sku[j].type] = [];
+           }
+           if(jQuery.inArray(variant.Sku[j].value, skuVariants[variant.Sku[j].type]) < 0 ){
              if(typeof variant.VariantImage[j] == "undefined"){
                skuVariants[variant.Sku[j].type].push(variant.Sku[j].value);
                skuVariantsData[variant.Sku[j].type].push([variant.Sku[j].value]);
@@ -116,9 +117,11 @@
 
      showVariants: function () {
      // bloco para montar as variacoes
+     jQuery(content).empty();
+     jQuery(content).append("<input type='hidden' name='variacao' id='selectedVariant"+options.productId+"' value=''>");
+     jQuery(content).prepend('<span class="var-unavailable'+options.productId+' blocoAlerta" style="display:none">Indisponivel</span>');
 
        var iOp = 0;
-
        for (var key in skuVariants) {
          var variantDiv = jQuery("<div></div>").text(key).attr("class","varTit onVar color-tone-1").attr("id","vars"+iOp);
          var variantInput = jQuery("<input></input>").attr("id","variacao"+iOp).attr("type","hidden");
@@ -165,14 +168,11 @@
          jQuery(content).append(variantDiv);
          jQuery(content).append(variantInput);
          jQuery(content).append(variantUl);
-
          iOp++;
        }
-
        for (i = 0; i < skuVariants.length; i++) {
          var variantDiv = jQuery("<div></div>").append(skuVariants);
        }
-
        // Seta variação adicionada ao carrinho
        jQuery("[data-add ="+options.productId+"]").click(function(){
          var selectedVariantInput = jQuery( content + " input#selectedVariant"+options.productId);
@@ -245,7 +245,6 @@
            jQuery("[data-add ="+options.productId+"]").text("Comprado!!");
          }).fail(function( jqXHR, status, errorThrown ){
            var response = $.parseJSON( jqXHR.responseText );
-           console.log(response);
          });
        }
      }
