@@ -80,7 +80,8 @@
         //Função de validação de disponibilizade do produto
        if(available != 0){
          for (j = 0; j < variant.Sku.length; j++) {
-           if (parseInt(response.paging.page) == 1
+           if (!skuVariants[variant.Sku[j].type]
+              && parseInt(response.paging.page) == 1
               && typeof variant.VariantImage[j] == "undefined") {
              skuVariants[variant.Sku[j].type] = [];
              skuVariantsData[variant.Sku[j].type] = [];
