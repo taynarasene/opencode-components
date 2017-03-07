@@ -3,7 +3,7 @@ Componente de seleção de variação para lojas que utilizam o Opencode
 
 ## Como utilizar
 
-Adicione o arquivo [variants.js](https://github.com/TaahSene/opencode-components/blob/master/variants/js/module/variants.js) a sua pasta `js/modlules`
+Adicione o arquivo [variants.js](https://github.com/TaahSene/opencode-components/blob/master/variants/js/module/variants.js) a sua pasta `js/modules`
 
 Crie no arquivo `elements/snippets/product.html` , um elemento que deverá receber todo o conteudo das variações, e também o botão de comprar, esse botão deve conter o data-attribute `data-add="{{ product.id }}"` por exemplo:
 
